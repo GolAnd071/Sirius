@@ -1,0 +1,3 @@
+[submodule "Sirius/vendor/spdlog"]
+	path = Sirius/vendor/spdlog
+	url = https://github.com/gabime/spdlog
