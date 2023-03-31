@@ -34,6 +34,7 @@
     <ClInclude Include="src\Sirius\Log.h">
       <Filter>Sirius</Filter>
     </ClInclude>
+    <ClInclude Include="src\srspch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sirius\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Sirius\Log.cpp">
       <Filter>Sirius</Filter>
     </ClCompile>
+    <ClCompile Include="src\srspch.cpp" />
   </ItemGroup>
 </Project>

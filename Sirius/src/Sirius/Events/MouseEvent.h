@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Sirius {
 
 	class SIRIUS_API MouseMovedEvent : public Event

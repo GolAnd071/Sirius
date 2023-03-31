@@ -2,9 +2,6 @@
 
 #include "Sirius/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Sirius {
 
 	// Events in Sirius are currently blocking, meaning when an event occurs it

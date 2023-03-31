@@ -1,3 +1,4 @@
+#include "srspch.h"
 #include "Application.h"
 
 #include "Sirius/Events/ApplicationEvent.h"

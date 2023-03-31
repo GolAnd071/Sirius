@@ -18,6 +18,9 @@ project "Sirius"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/${prj.name}")
 
+	pchheader "srspch.h"
+	pchsource "Sirius/src/srspch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
