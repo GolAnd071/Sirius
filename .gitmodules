@@ -1,3 +1,6 @@
 [submodule "Sirius/vendor/spdlog"]
 	path = Sirius/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Sirius/vendor/GLFW"]
+	path = Sirius/vendor/GLFW
+	url = https://github.com/GolAnd071/glfw
