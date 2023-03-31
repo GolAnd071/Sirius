@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Sirius/vendor/GLFW/include"
+IncludeDir["Glad"] = "Sirius/vendor/Glad/include"
 
 include "Sirius/vendor/GLFW"
+include "Sirius/vendor/Glad"
 
 project "Sirius"
 	location "Sirius"
@@ -37,12 +39,14 @@ project "Sirius"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links 
 	{ 
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -54,7 +58,8 @@ project "Sirius"
 		defines
 		{
 			"SRS_PLATFORM_WINDOWS",
-			"SRS_BUILD_DLL"
+			"SRS_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
