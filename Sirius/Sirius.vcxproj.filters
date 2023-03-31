@@ -4,6 +4,9 @@
     <Filter Include="Sirius">
       <UniqueIdentifier>{448F27D1-3031-52A7-19EC-65FB052DD9F7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sirius\Events">
+      <UniqueIdentifier>{A8E62272-14A7-9EA8-DDE1-E7254961E384}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Sirius.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Sirius\EntryPoint.h">
       <Filter>Sirius</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Events\ApplicationEvent.h">
+      <Filter>Sirius\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Events\Event.h">
+      <Filter>Sirius\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Events\KeyEvent.h">
+      <Filter>Sirius\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Events\MouseEvent.h">
+      <Filter>Sirius\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Sirius\Log.h">
       <Filter>Sirius</Filter>
