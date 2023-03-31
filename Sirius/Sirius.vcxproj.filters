@@ -40,6 +40,12 @@
     <ClInclude Include="src\Sirius\Events\MouseEvent.h">
       <Filter>Sirius\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Sirius\Layer.h">
+      <Filter>Sirius</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\LayerStack.h">
+      <Filter>Sirius</Filter>
+    </ClInclude>
     <ClInclude Include="src\Sirius\Log.h">
       <Filter>Sirius</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Sirius\Application.cpp">
+      <Filter>Sirius</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sirius\Layer.cpp">
+      <Filter>Sirius</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sirius\LayerStack.cpp">
       <Filter>Sirius</Filter>
     </ClCompile>
     <ClCompile Include="src\Sirius\Log.cpp">
