@@ -24,6 +24,9 @@
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -52,6 +55,12 @@
     <ClInclude Include="src\Sirius\ImGui\ImGuiLayer.h">
       <Filter>Sirius\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Sirius\Input.h">
+      <Filter>Sirius</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\KeyCodes.h">
+      <Filter>Sirius</Filter>
+    </ClInclude>
     <ClInclude Include="src\Sirius\Layer.h">
       <Filter>Sirius</Filter>
     </ClInclude>
@@ -61,16 +70,20 @@
     <ClInclude Include="src\Sirius\Log.h">
       <Filter>Sirius</Filter>
     </ClInclude>
+    <ClInclude Include="src\Sirius\MouseButtonCodes.h">
+      <Filter>Sirius</Filter>
+    </ClInclude>
     <ClInclude Include="src\Sirius\Window.h">
       <Filter>Sirius</Filter>
     </ClInclude>
     <ClInclude Include="src\srspch.h" />
-    <ClInclude Include="src\Sirius\Input.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
@@ -91,6 +104,5 @@
       <Filter>Sirius</Filter>
     </ClCompile>
     <ClCompile Include="src\srspch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

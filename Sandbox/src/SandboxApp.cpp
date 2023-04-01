@@ -10,12 +10,19 @@ public:
 
 	void OnUpdate() override
 	{
-		SRS_INFO("ExampleLayer::Update");
+		if (Sirius::Input::IsKeyPressed(SRS_KEY_TAB))
+			SRS_TRACE("Tab key is pressed (poll)!");
 	}
 
 	void OnEvent(Sirius::Event& event) override
 	{
-		SRS_TRACE("{0}", event);
+		if (event.GetEventType() == Sirius::EventType::KeyPressed)
+		{
+			Sirius::KeyPressedEvent& e = (Sirius::KeyPressedEvent&)event;
+			if (e.GetKeyCode() == SRS_KEY_TAB)
+				SRS_TRACE("Tab key is pressed (event)!");
+			SRS_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 
 };
