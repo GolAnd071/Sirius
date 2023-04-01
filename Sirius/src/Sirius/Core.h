@@ -10,6 +10,10 @@
 	#error Sirius only supports Windows!
 #endif
 
+#ifdef SRS_DEBUG
+	#define SRS_ENABLE_ASSERTS
+#endif
+
 #ifdef SRS_ENABLE_ASSERTS
 	#define SRS_ASSERT(x, ...) { if(!(x)) { SRS_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define SRS_CORE_ASSERT(x, ...) { if(!(x)) { SRS_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
