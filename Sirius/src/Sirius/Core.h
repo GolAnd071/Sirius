@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef SRS_PLATFORM_WINDOWS
+#if SRS_DYNAMIC_LINK
 	#ifdef SRS_BUILD_DLL
 		#define SIRIUS_API __declspec(dllexport)
 	#else
 		#define SIRIUS_API __declspec(dllimport)
 	#endif
+#else
+	#define SIRIUS_API
+#endif
 #else
 	#error Sirius only supports Windows!
 #endif
