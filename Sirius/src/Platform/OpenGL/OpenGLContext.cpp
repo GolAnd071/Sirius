@@ -18,6 +18,12 @@ namespace Sirius {
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		SRS_CORE_ASSERT(status, "Failed to initialize Glad!");
+
+		SRS_CORE_INFO("OpenGL Info:");
+		SRS_CORE_INFO("  Vendor: {0}", (char*)glGetString(GL_VENDOR));
+		SRS_CORE_INFO("  Renderer: {0}", (char*)glGetString(GL_RENDERER));
+		SRS_CORE_INFO("  Version: {0}", (char*)glGetString(GL_VERSION));
+
 	}
 
 	void OpenGLContext::SwapBuffers()
