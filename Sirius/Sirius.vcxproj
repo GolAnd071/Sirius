@@ -143,6 +143,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
@@ -161,7 +162,9 @@
     <ClInclude Include="src\Sirius\LayerStack.h" />
     <ClInclude Include="src\Sirius\Log.h" />
     <ClInclude Include="src\Sirius\MouseButtonCodes.h" />
+    <ClInclude Include="src\Sirius\Renderer\Buffer.h" />
     <ClInclude Include="src\Sirius\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Sirius\Renderer\Renderer.h" />
     <ClInclude Include="src\Sirius\Renderer\Shader.h" />
     <ClInclude Include="src\Sirius\Window.h" />
     <ClInclude Include="src\srspch.h" />
@@ -583,6 +586,7 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
@@ -592,6 +596,8 @@
     <ClCompile Include="src\Sirius\Layer.cpp" />
     <ClCompile Include="src\Sirius\LayerStack.cpp" />
     <ClCompile Include="src\Sirius\Log.cpp" />
+    <ClCompile Include="src\Sirius\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Sirius\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Sirius\Renderer\Shader.cpp" />
     <ClCompile Include="src\srspch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
