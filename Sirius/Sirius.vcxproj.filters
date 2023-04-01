@@ -65,6 +65,8 @@
       <Filter>Sirius</Filter>
     </ClInclude>
     <ClInclude Include="src\srspch.h" />
+    <ClInclude Include="src\Sirius\Input.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
@@ -89,5 +91,6 @@
       <Filter>Sirius</Filter>
     </ClCompile>
     <ClCompile Include="src\srspch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

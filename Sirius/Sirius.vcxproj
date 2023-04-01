@@ -153,6 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Sirius.h" />
     <ClInclude Include="src\Sirius\Application.h" />
@@ -163,6 +164,7 @@
     <ClInclude Include="src\Sirius\Events\KeyEvent.h" />
     <ClInclude Include="src\Sirius\Events\MouseEvent.h" />
     <ClInclude Include="src\Sirius\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Sirius\Input.h" />
     <ClInclude Include="src\Sirius\Layer.h" />
     <ClInclude Include="src\Sirius\LayerStack.h" />
     <ClInclude Include="src\Sirius\Log.h" />
@@ -171,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Sirius\Application.cpp" />
     <ClCompile Include="src\Sirius\ImGui\ImGuiLayer.cpp" />
