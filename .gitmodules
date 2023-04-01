@@ -7,3 +7,6 @@
 [submodule "Sirius/vendor/imgui"]
 	path = Sirius/vendor/imgui
 	url = https://github.com/GolAnd071/imgui
+[submodule "Sirius/vendor/glm"]
+	path = Sirius/vendor/glm
+	url = https://github.com/g-truc/glm

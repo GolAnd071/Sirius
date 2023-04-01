@@ -79,4 +79,5 @@ namespace Sirius {
 	{
 		return os << e.ToString();
 	}
+
 }
