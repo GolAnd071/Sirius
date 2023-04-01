@@ -7,6 +7,8 @@
 #include "Sirius/Events/Event.h"
 #include "Sirius/Events/ApplicationEvent.h"
 
+#include "Sirius/ImGui/ImGuiLayer.h"
+
 namespace Sirius {
 
 	class SIRIUS_API Application
@@ -29,6 +31,7 @@ namespace Sirius {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

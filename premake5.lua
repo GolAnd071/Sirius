@@ -110,6 +110,7 @@ project "Sandbox"
 	{
 		"Sirius/vendor/spdlog/include",
 		"Sirius/src",
+		"Sirius/vendor",
 		"%{IncludeDir.glm}"
 	}
 
