@@ -162,6 +162,7 @@
     <ClInclude Include="src\Sirius\Log.h" />
     <ClInclude Include="src\Sirius\MouseButtonCodes.h" />
     <ClInclude Include="src\Sirius\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Sirius\Renderer\Shader.h" />
     <ClInclude Include="src\Sirius\Window.h" />
     <ClInclude Include="src\srspch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -591,6 +592,7 @@
     <ClCompile Include="src\Sirius\Layer.cpp" />
     <ClCompile Include="src\Sirius\LayerStack.cpp" />
     <ClCompile Include="src\Sirius\Log.cpp" />
+    <ClCompile Include="src\Sirius\Renderer\Shader.cpp" />
     <ClCompile Include="src\srspch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
