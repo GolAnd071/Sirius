@@ -8,9 +8,4 @@ namespace Sirius {
 	{
 	}
 
-	Layer::~Layer()
-	{
-
-	}
-
 }
