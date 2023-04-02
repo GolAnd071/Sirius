@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Sirius/Core.h"
+#include "Sirius/Core/Timestep.h"
 #include "Sirius/Events/Event.h"
 
 namespace Sirius {
@@ -13,7 +14,7 @@ namespace Sirius {
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 

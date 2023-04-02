@@ -7,17 +7,13 @@
 #include "Sirius/Events/Event.h"
 #include "Sirius/Events/ApplicationEvent.h"
 
+#include "Sirius/Core/Timestep.h"
+
 #include "Sirius/ImGui/ImGuiLayer.h"
-
-#include "Sirius/Renderer/Shader.h"
-#include "Sirius/Renderer/Buffer.h"
-#include "Sirius/Renderer/VertexArray.h"
-
-#include "Sirius/Renderer/OrthographicCamera.h"
 
 namespace Sirius {
 
-	class SIRIUS_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -35,19 +31,12 @@ namespace Sirius {
 		inline static Application& Get() { return *s_Instance; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
-
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
+		float m_LastFrameTime = 0.0f;
 	private:
 		static Application* s_Instance;
 	};

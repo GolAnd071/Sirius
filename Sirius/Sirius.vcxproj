@@ -152,6 +152,7 @@
     <ClInclude Include="src\Sirius.h" />
     <ClInclude Include="src\Sirius\Application.h" />
     <ClInclude Include="src\Sirius\Core.h" />
+    <ClInclude Include="src\Sirius\Core\Timestep.h" />
     <ClInclude Include="src\Sirius\EntryPoint.h" />
     <ClInclude Include="src\Sirius\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Sirius\Events\Event.h" />
