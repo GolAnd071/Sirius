@@ -13,6 +13,8 @@
 #include "Sirius/Renderer/Buffer.h"
 #include "Sirius/Renderer/VertexArray.h"
 
+#include "Sirius/Renderer/OrthographicCamera.h"
+
 namespace Sirius {
 
 	class SIRIUS_API Application
@@ -44,6 +46,8 @@ namespace Sirius {
 
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
+
+		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
