@@ -92,7 +92,7 @@ public:
 			}
 		)";
 
-		m_Shader.reset(Sirius::Shader::Create(vertexSrc, fragmentSrc));
+		m_Shader = Sirius::Shader::Create("VertexPosColor", vertexSrc, fragmentSrc);
 
 		std::string flatColorShaderVertexSrc = R"(
 			#version 330 core
@@ -126,15 +126,15 @@ public:
 			}
 		)";
 
-		m_FlatColorShader.reset(Sirius::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+		m_FlatColorShader = Sirius::Shader::Create("FlatColor", flatColorShaderVertexSrc, flatColorShaderFragmentSrc);
 
-		m_TextureShader.reset(Sirius::Shader::Create("assets/shaders/Texture.glsl"));
+		auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
 
 		m_Texture = Sirius::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_GolAnd071LogoTexture = Sirius::Texture2D::Create("assets/textures/GolAnd071Logo.png");
 
-		std::dynamic_pointer_cast<Sirius::OpenGLShader>(m_TextureShader)->Bind();
-		std::dynamic_pointer_cast<Sirius::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
+		std::dynamic_pointer_cast<Sirius::OpenGLShader>(textureShader)->Bind();
+		std::dynamic_pointer_cast<Sirius::OpenGLShader>(textureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(Sirius::Timestep ts) override
@@ -177,10 +177,12 @@ public:
 			}
 		}
 
+		auto textureShader = m_ShaderLibrary.Get("Texture");
+
 		m_Texture->Bind();
-		Sirius::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Sirius::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 		m_GolAnd071LogoTexture->Bind();
-		Sirius::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Sirius::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		// Triangle
 		// Sirius::Renderer::Submit(m_Shader, m_VertexArray);
@@ -199,10 +201,11 @@ public:
 	{
 	}
 private:
+	Sirius::ShaderLibrary m_ShaderLibrary;
 	Sirius::Ref<Sirius::Shader> m_Shader;
 	Sirius::Ref<Sirius::VertexArray> m_VertexArray;
 
-	Sirius::Ref<Sirius::Shader> m_FlatColorShader, m_TextureShader;
+	Sirius::Ref<Sirius::Shader> m_FlatColorShader;
 	Sirius::Ref<Sirius::VertexArray> m_SquareVA;
 
 	Sirius::Ref<Sirius::Texture2D> m_Texture, m_GolAnd071LogoTexture;
