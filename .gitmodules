@@ -1,12 +1,16 @@
 [submodule "Sirius/vendor/spdlog"]
 	path = Sirius/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+	branch = v1.x
 [submodule "Sirius/vendor/GLFW"]
 	path = Sirius/vendor/GLFW
 	url = https://github.com/GolAnd071/glfw
+	branch = master
 [submodule "Sirius/vendor/imgui"]
 	path = Sirius/vendor/imgui
 	url = https://github.com/GolAnd071/imgui
+	branch = docking
 [submodule "Sirius/vendor/glm"]
 	path = Sirius/vendor/glm
 	url = https://github.com/g-truc/glm
+	branch = master

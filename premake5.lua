@@ -83,7 +83,6 @@ project "Sirius"
 
 		defines
 		{
-			"SRS_PLATFORM_WINDOWS",
 			"SRS_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
 		}
@@ -134,11 +133,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		systemversion "latest"
-
-		defines
-		{
-			"SRS_PLATFORM_WINDOWS"
-		}
 
 	filter "configurations:Debug"
 		defines "SRS_DEBUG"
