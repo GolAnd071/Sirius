@@ -1,7 +1,7 @@
 #include "srspch.h"
 #include "Application.h"
 
-#include "Sirius/Log.h"
+#include "Sirius/Core/Log.h"
 
 #include "Sirius/Renderer/Renderer.h"
 

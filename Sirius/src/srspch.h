@@ -13,7 +13,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "Sirius/Log.h"
+#include "Sirius/Core/Log.h"
 
 #ifdef SRS_PLATFORM_WINDOWS
 	#include <Windows.h>

@@ -1,7 +1,7 @@
 #include "srspch.h"
 #include "WindowsInput.h"
 
-#include "Sirius/Application.h"
+#include "Sirius/Core/Application.h"
 #include <GLFW/glfw3.h>
 
 namespace Sirius {

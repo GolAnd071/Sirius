@@ -81,17 +81,38 @@
     <ClInclude Include="src\Sirius.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Sirius\Application.h">
-      <Filter>src\Sirius</Filter>
+    <ClInclude Include="src\Sirius\Core\Application.h">
+      <Filter>src\Sirius\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Sirius\Core.h">
-      <Filter>src\Sirius</Filter>
+    <ClInclude Include="src\Sirius\Core\Core.h">
+      <Filter>src\Sirius\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Core\EntryPoint.h">
+      <Filter>src\Sirius\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Core\Input.h">
+      <Filter>src\Sirius\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Core\KeyCodes.h">
+      <Filter>src\Sirius\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Core\Layer.h">
+      <Filter>src\Sirius\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Core\LayerStack.h">
+      <Filter>src\Sirius\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Core\Log.h">
+      <Filter>src\Sirius\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Core\MouseButtonCodes.h">
+      <Filter>src\Sirius\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Sirius\Core\Timestep.h">
       <Filter>src\Sirius\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Sirius\EntryPoint.h">
-      <Filter>src\Sirius</Filter>
+    <ClInclude Include="src\Sirius\Core\Window.h">
+      <Filter>src\Sirius\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Sirius\Events\ApplicationEvent.h">
       <Filter>src\Sirius\Events</Filter>
@@ -108,27 +129,6 @@
     <ClInclude Include="src\Sirius\ImGui\ImGuiLayer.h">
       <Filter>src\Sirius\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="src\Sirius\Input.h">
-      <Filter>src\Sirius</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Sirius\KeyCodes.h">
-      <Filter>src\Sirius</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Sirius\Layer.h">
-      <Filter>src\Sirius</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Sirius\LayerStack.h">
-      <Filter>src\Sirius</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Sirius\Log.h">
-      <Filter>src\Sirius</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Sirius\MouseButtonCodes.h">
-      <Filter>src\Sirius</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Sirius\OrthographicCameraController.h">
-      <Filter>src\Sirius</Filter>
-    </ClInclude>
     <ClInclude Include="src\Sirius\Renderer\Buffer.h">
       <Filter>src\Sirius\Renderer</Filter>
     </ClInclude>
@@ -136,6 +136,9 @@
       <Filter>src\Sirius\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Sirius\Renderer\OrthographicCamera.h">
+      <Filter>src\Sirius\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sirius\Renderer\OrthographicCameraController.h">
       <Filter>src\Sirius\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Sirius\Renderer\RenderCommand.h">
@@ -155,9 +158,6 @@
     </ClInclude>
     <ClInclude Include="src\Sirius\Renderer\VertexArray.h">
       <Filter>src\Sirius\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Sirius\Window.h">
-      <Filter>src\Sirius</Filter>
     </ClInclude>
     <ClInclude Include="src\srspch.h">
       <Filter>src</Filter>
@@ -1439,8 +1439,17 @@
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
-    <ClCompile Include="src\Sirius\Application.cpp">
-      <Filter>src\Sirius</Filter>
+    <ClCompile Include="src\Sirius\Core\Application.cpp">
+      <Filter>src\Sirius\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sirius\Core\Layer.cpp">
+      <Filter>src\Sirius\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sirius\Core\LayerStack.cpp">
+      <Filter>src\Sirius\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sirius\Core\Log.cpp">
+      <Filter>src\Sirius\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Sirius\ImGui\ImGuiBuild.cpp">
       <Filter>src\Sirius\ImGui</Filter>
@@ -1448,22 +1457,13 @@
     <ClCompile Include="src\Sirius\ImGui\ImGuiLayer.cpp">
       <Filter>src\Sirius\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="src\Sirius\Layer.cpp">
-      <Filter>src\Sirius</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Sirius\LayerStack.cpp">
-      <Filter>src\Sirius</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Sirius\Log.cpp">
-      <Filter>src\Sirius</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Sirius\OrthographicCameraController.cpp">
-      <Filter>src\Sirius</Filter>
-    </ClCompile>
     <ClCompile Include="src\Sirius\Renderer\Buffer.cpp">
       <Filter>src\Sirius\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Sirius\Renderer\OrthographicCamera.cpp">
+      <Filter>src\Sirius\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sirius\Renderer\OrthographicCameraController.cpp">
       <Filter>src\Sirius\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Sirius\Renderer\RenderCommand.cpp">

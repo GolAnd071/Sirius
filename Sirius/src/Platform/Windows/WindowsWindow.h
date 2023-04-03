@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Sirius/Window.h"
+#include "Sirius/Core/Window.h"
 #include "Sirius/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>

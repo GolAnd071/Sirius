@@ -3,7 +3,7 @@
 #include "Core.h"
 
 #include "Window.h"
-#include "Sirius/LayerStack.h"
+#include "Sirius/Core/LayerStack.h"
 #include "Sirius/Events/Event.h"
 #include "Sirius/Events/ApplicationEvent.h"
 

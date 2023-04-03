@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "Sirius/Core.h"
+#include "Sirius/Core/Core.h"
 
 namespace Sirius {
 

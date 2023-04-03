@@ -1,8 +1,8 @@
 #include "srspch.h"
 #include "OrthographicCameraController.h"
 
-#include "Sirius/Input.h"
-#include "Sirius/KeyCodes.h"
+#include "Sirius/Core/Input.h"
+#include "Sirius/Core/KeyCodes.h"
 
 namespace Sirius {
 

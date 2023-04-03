@@ -2,16 +2,16 @@
 
 // For use by Sirius applications
 
-#include "Sirius/Application.h"
-#include "Sirius/Layer.h"
-#include "Sirius/Log.h"
+#include "Sirius/Core/Application.h"
+#include "Sirius/Core/Layer.h"
+#include "Sirius/Core/Log.h"
 
 #include "Sirius/Core/Timestep.h"
 
-#include "Sirius/Input.h"
-#include "Sirius/KeyCodes.h"
-#include "Sirius/MouseButtonCodes.h"
-#include "Sirius/OrthographicCameraController.h"
+#include "Sirius/Core/Input.h"
+#include "Sirius/Core/KeyCodes.h"
+#include "Sirius/Core/MouseButtonCodes.h"
+#include "Sirius/Renderer/OrthographicCameraController.h"
 
 #include "Sirius/ImGui/ImGuiLayer.h"
 
@@ -28,5 +28,5 @@
 // -----------------------------------
 
 // ---Entry Point---------------------
-#include "Sirius/EntryPoint.h"
+#include "Sirius/Core/EntryPoint.h"
 // -----------------------------------
