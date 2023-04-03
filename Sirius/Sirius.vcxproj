@@ -171,6 +171,7 @@
     <ClInclude Include="src\Sirius\LayerStack.h" />
     <ClInclude Include="src\Sirius\Log.h" />
     <ClInclude Include="src\Sirius\MouseButtonCodes.h" />
+    <ClInclude Include="src\Sirius\OrthographicCameraController.h" />
     <ClInclude Include="src\Sirius\Renderer\Buffer.h" />
     <ClInclude Include="src\Sirius\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Sirius\Renderer\OrthographicCamera.h" />
@@ -615,6 +616,7 @@
     <ClCompile Include="src\Sirius\Layer.cpp" />
     <ClCompile Include="src\Sirius\LayerStack.cpp" />
     <ClCompile Include="src\Sirius\Log.cpp" />
+    <ClCompile Include="src\Sirius\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Sirius\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Sirius\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Sirius\Renderer\RenderCommand.cpp" />

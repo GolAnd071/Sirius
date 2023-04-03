@@ -11,6 +11,7 @@
 #include "Sirius/Input.h"
 #include "Sirius/KeyCodes.h"
 #include "Sirius/MouseButtonCodes.h"
+#include "Sirius/OrthographicCameraController.h"
 
 #include "Sirius/ImGui/ImGuiLayer.h"
 
