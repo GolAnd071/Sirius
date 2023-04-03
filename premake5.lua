@@ -9,6 +9,11 @@ workspace "Sirius"
 		"Dist"
 	}
 
+	flags
+	{
+		"MultiProcessorCompile"
+	}
+
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
@@ -17,10 +22,14 @@ IncludeDir["GLFW"] = "Sirius/vendor/GLFW/include"
 IncludeDir["Glad"] = "Sirius/vendor/Glad/include"
 IncludeDir["ImGui"] = "Sirius/vendor/imgui"
 IncludeDir["glm"] = "Sirius/vendor/glm"
+IncludeDir["stb_image"] = "Sirius/vendor/stb_image"
 
-include "Sirius/vendor/GLFW"
-include "Sirius/vendor/Glad"
-include "Sirius/vendor/imgui"
+group "Dependencies"
+	include "Sirius/vendor/GLFW"
+	include "Sirius/vendor/Glad"
+	include "Sirius/vendor/imgui"
+
+group ""
 
 project "Sirius"
 	location "Sirius"
@@ -39,6 +48,8 @@ project "Sirius"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
@@ -55,7 +66,8 @@ project "Sirius"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 	}
 
 	links 
