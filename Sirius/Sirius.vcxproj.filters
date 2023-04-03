@@ -126,6 +126,9 @@
     <ClInclude Include="src\Sirius\MouseButtonCodes.h">
       <Filter>src\Sirius</Filter>
     </ClInclude>
+    <ClInclude Include="src\Sirius\OrthographicCameraController.h">
+      <Filter>src\Sirius</Filter>
+    </ClInclude>
     <ClInclude Include="src\Sirius\Renderer\Buffer.h">
       <Filter>src\Sirius\Renderer</Filter>
     </ClInclude>
@@ -1410,7 +1413,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Sirius\OrthographicCameraController.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
@@ -1455,6 +1457,9 @@
     <ClCompile Include="src\Sirius\Log.cpp">
       <Filter>src\Sirius</Filter>
     </ClCompile>
+    <ClCompile Include="src\Sirius\OrthographicCameraController.cpp">
+      <Filter>src\Sirius</Filter>
+    </ClCompile>
     <ClCompile Include="src\Sirius\Renderer\Buffer.cpp">
       <Filter>src\Sirius\Renderer</Filter>
     </ClCompile>
@@ -1485,6 +1490,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Sirius\OrthographicCameraController.cpp" />
   </ItemGroup>
 </Project>
