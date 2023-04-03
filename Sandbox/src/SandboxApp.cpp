@@ -164,6 +164,7 @@ public:
 		m_TextureShader.reset(Sirius::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
 
 		m_Texture = Sirius::Texture2D::Create("assets/textures/Checkerboard.png");
+		m_GolAnd071LogoTexture = Sirius::Texture2D::Create("assets/textures/GolAnd071Logo.png");
 
 		std::dynamic_pointer_cast<Sirius::OpenGLShader>(m_TextureShader)->Bind();
 		std::dynamic_pointer_cast<Sirius::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
@@ -211,6 +212,8 @@ public:
 
 		m_Texture->Bind();
 		Sirius::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		m_GolAnd071LogoTexture->Bind();
+		Sirius::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		// Triangle
 		// Sirius::Renderer::Submit(m_Shader, m_VertexArray);
@@ -235,7 +238,7 @@ private:
 	Sirius::Ref<Sirius::Shader> m_FlatColorShader, m_TextureShader;
 	Sirius::Ref<Sirius::VertexArray> m_SquareVA;
 
-	Sirius::Ref<Sirius::Texture2D> m_Texture;
+	Sirius::Ref<Sirius::Texture2D> m_Texture, m_GolAnd071LogoTexture;
 
 	Sirius::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
