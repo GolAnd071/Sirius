@@ -17,6 +17,7 @@
 
 // ---Renderer------------------------
 #include "Sirius/Renderer/Renderer.h"
+#include "Sirius/Renderer/Renderer2D.h"
 #include "Sirius/Renderer/RenderCommand.h"
 
 #include "Sirius/Renderer/Buffer.h"

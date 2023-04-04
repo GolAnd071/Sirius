@@ -9,7 +9,7 @@
 
 namespace Sirius {
 
-	static bool s_GLFWInitialized = false;
+	static uint8_t s_GLFWWindowCount = 0;
 
 	static void GLFWErrorsCallback(int error, const char* description)
 	{
@@ -39,17 +39,17 @@ namespace Sirius {
 
 		SRS_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
-		if (!s_GLFWInitialized)
+		if (s_GLFWWindowCount == 0)
 		{
-			// TODO: glfwTerminate on system shutdown
+			SRS_CORE_INFO("Initializing GLFW");
 			int success = glfwInit();
 			SRS_CORE_ASSERT(success, "Could not intialize GLFW!");
 			glfwSetErrorCallback(GLFWErrorsCallback);
-			s_GLFWInitialized = true;
 		}
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
-		
+		++s_GLFWWindowCount;
+
 		m_Context = CreateScope<OpenGLContext>(m_Window);
 
 		m_Context->Init();
@@ -151,6 +151,12 @@ namespace Sirius {
 	void WindowsWindow::Shutdown()
 	{
 		glfwDestroyWindow(m_Window);
+
+		if (--s_GLFWWindowCount == 0)
+		{
+			SRS_CORE_INFO("Terminating GLFW");
+			glfwTerminate();
+		}
 	}
 
 	void WindowsWindow::OnUpdate()
