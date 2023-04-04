@@ -1,16 +1,16 @@
 #pragma once
 
 #include "Sirius/Core/Core.h"
-#include "Layer.h"
+#include "Sirius/Core/Layer.h"
 
 #include <vector>
 
 namespace Sirius {
 
-	class SIRIUS_API LayerStack
+	class LayerStack
 	{
 	public:
-		LayerStack();
+		LayerStack() = default;
 		~LayerStack();
 
 		void PushLayer(Layer* layer);

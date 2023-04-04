@@ -1,7 +1,7 @@
 #include "srspch.h"
-#include "Shader.h"
+#include "Sirius/Renderer/Shader.h"
 
-#include "Renderer.h"
+#include "Sirius/Renderer/Renderer.h"
 #include "Platform/OpenGL/OpenGLShader.h"
 
 namespace Sirius {
@@ -11,7 +11,7 @@ namespace Sirius {
 		switch (Renderer::GetAPI())
 		{
 		case RendererAPI::API::None:	SRS_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::API::OpenGL:	return std::make_shared<OpenGLShader>(filepath);
+		case RendererAPI::API::OpenGL:	return CreateRef<OpenGLShader>(filepath);
 		}
 
 		SRS_CORE_ASSERT(false, "Unknown RendererAPI!");
@@ -23,7 +23,7 @@ namespace Sirius {
 		switch (Renderer::GetAPI())
 		{
 		case RendererAPI::API::None:    SRS_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::API::OpenGL:  return std::make_shared<OpenGLShader>(name, vertexSrc, fragmentSrc);	
+		case RendererAPI::API::OpenGL:  return CreateRef<OpenGLShader>(name, vertexSrc, fragmentSrc);	
 		}
 
 		SRS_CORE_ASSERT(false, "Unknown RendererAPI!");

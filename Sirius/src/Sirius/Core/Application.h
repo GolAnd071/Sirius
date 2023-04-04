@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Core.h"
+#include "Sirius/Core/Core.h"
 
-#include "Window.h"
+#include "Sirius/Core/Window.h"
 #include "Sirius/Core/LayerStack.h"
 #include "Sirius/Events/Event.h"
 #include "Sirius/Events/ApplicationEvent.h"
@@ -17,7 +17,7 @@ namespace Sirius {
 	{
 	public:
 		Application();
-		virtual ~Application() = default;
+		virtual ~Application();
 
 		void Run();
 

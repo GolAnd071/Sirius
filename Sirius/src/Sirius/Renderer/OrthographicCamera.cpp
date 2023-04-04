@@ -1,5 +1,5 @@
 #include "srspch.h"
-#include "OrthographicCamera.h"
+#include "Sirius/Renderer/OrthographicCamera.h"
 
 #include <glm/gtc/matrix_transform.hpp>
 

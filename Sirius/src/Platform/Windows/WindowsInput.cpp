@@ -1,5 +1,5 @@
 #include "srspch.h"
-#include "WindowsInput.h"
+#include "Platform/Windows/WindowsInput.h"
 
 #include "Sirius/Core/Application.h"
 #include <GLFW/glfw3.h>

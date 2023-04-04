@@ -43,21 +43,6 @@
 	#error "Unknown platform!"
 #endif // End of platform detection
 
-// DLL support
-#ifdef SRS_PLATFORM_WINDOWS
-	#if SRS_DYNAMIC_LINK
-		#ifdef SRS_BUILD_DLL
-			#define SIRIUS_API __declspec(dllexport)
-		#else
-			#define SIRIUS_API __declspec(dllimport)
-		#endif
-	#else
-		#define SIRIUS_API
-	#endif
-#else
-	#error Sirius only supports Windows!
-#endif // End of DLL support
-
 #ifdef SRS_DEBUG
 	#define SRS_ENABLE_ASSERTS
 #endif

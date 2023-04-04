@@ -1,5 +1,5 @@
 #include "srspch.h"
-#include "OrthographicCameraController.h"
+#include "Sirius/Renderer/OrthographicCameraController.h"
 
 #include "Sirius/Core/Input.h"
 #include "Sirius/Core/KeyCodes.h"

@@ -4,7 +4,7 @@
 
 namespace Sirius {
 
-	class SIRIUS_API Input
+	class Input
 	{
 	protected:
 		Input() = default;

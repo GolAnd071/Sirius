@@ -1,6 +1,6 @@
 #pragma once
-
 #include "srspch.h"
+
 #include "Sirius/Core/Core.h"
 
 namespace Sirius {
@@ -35,7 +35,7 @@ namespace Sirius {
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
-	class SIRIUS_API Event
+	class Event
 	{
 	public:
 		bool Handled = false;

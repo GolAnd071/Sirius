@@ -1,7 +1,7 @@
 #include "srspch.h"
-#include "Texture.h"
+#include "Sirius/Renderer/Texture.h"
 
-#include "Renderer.h"
+#include "Sirius/Renderer/Renderer.h"
 #include "Platform/OpenGL/OpenGLTexture.h"
 
 namespace Sirius {

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "OrthographicCamera.h"
+#include "Sirius/Renderer/OrthographicCamera.h"
 
-#include "Texture.h"
+#include "Sirius/Renderer/Texture.h"
 
 namespace Sirius {
 

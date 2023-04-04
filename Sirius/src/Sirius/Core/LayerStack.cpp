@@ -1,11 +1,7 @@
 #include "srspch.h"
-#include "LayerStack.h"
+#include "Sirius/Core/LayerStack.h"
 
 namespace Sirius {
-
-	LayerStack::LayerStack()
-	{
-	}
 
 	LayerStack::~LayerStack()
 	{

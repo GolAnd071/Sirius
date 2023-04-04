@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Sirius/Core/Core.h"
+
 #ifdef SRS_PLATFORM_WINDOWS
 
 extern Sirius::Application* Sirius::CreateApplication();
