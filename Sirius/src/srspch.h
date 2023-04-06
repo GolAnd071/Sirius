@@ -15,6 +15,8 @@
 
 #include "Sirius/Core/Log.h"
 
+#include "Sirius/Debug/Instrumentor.h"
+
 #ifdef SRS_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
