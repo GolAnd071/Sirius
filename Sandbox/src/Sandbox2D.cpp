@@ -11,11 +11,14 @@ Sandbox2D::Sandbox2D()
 
 void Sandbox2D::OnAttach()
 {
+	SRS_PROFILE_FUNCTION();
+
 	m_CheckerboardTexture = Sirius::Texture2D::Create("assets/textures/Checkerboard.png");
 }
 
 void Sandbox2D::OnDetach()
 {
+	SRS_PROFILE_FUNCTION();
 }
 
 void Sandbox2D::OnUpdate(Sirius::Timestep ts)
@@ -23,10 +26,7 @@ void Sandbox2D::OnUpdate(Sirius::Timestep ts)
 	SRS_PROFILE_FUNCTION();
 
 	// Update
-	{
-		SRS_PROFILE_SCOPE("CameraController::OnUpdate");
-		m_CameraController.OnUpdate(ts);
-	}
+	m_CameraController.OnUpdate(ts);
 
 	// Render
 	{

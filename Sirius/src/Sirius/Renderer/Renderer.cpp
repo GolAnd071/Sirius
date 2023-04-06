@@ -8,6 +8,8 @@ namespace Sirius {
 
 	void Renderer::Init()
 	{
+		SRS_PROFILE_FUNCTION();
+
 		RenderCommand::Init();
 		Renderer2D::Init();
 	}
