@@ -12,7 +12,7 @@
 
 #include "Sirius/Core/Input.h"
 #include "Sirius/Core/KeyCodes.h"
-#include "Sirius/Core/MouseButtonCodes.h"
+#include "Sirius/Core/MouseCodes.h"
 #include "Sirius/Renderer/OrthographicCameraController.h"
 
 #include "Sirius/ImGui/ImGuiLayer.h"

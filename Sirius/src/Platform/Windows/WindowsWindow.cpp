@@ -1,9 +1,13 @@
 #include "srspch.h"
 #include "Platform/Windows/WindowsWindow.h"
 
+#include "Sirius/Core/Input.h"
+
 #include "Sirius/Events/ApplicationEvent.h"
 #include "Sirius/Events/MouseEvent.h"
 #include "Sirius/Events/KeyEvent.h"
+
+#include "Sirius/Renderer/Renderer.h"
 
 #include "Platform/OpenGL/OpenGLContext.h"
 
@@ -14,11 +18,6 @@ namespace Sirius {
 	static void GLFWErrorsCallback(int error, const char* description)
 	{
 		SRS_CORE_ERROR("GLFW Error ({0}): {1}", error, description);
-	}
-
-	Scope<Window> Window::Create(const WindowProps& props)
-	{
-		return CreateScope<WindowsWindow>(props);
 	}
 
 	WindowsWindow::WindowsWindow(const WindowProps& props)
@@ -49,12 +48,16 @@ namespace Sirius {
 		{
 			SRS_PROFILE_SCOPE("glfwInit");
 			int success = glfwInit();
-			SRS_CORE_ASSERT(success, "Could not intialize GLFW!");
+			SRS_CORE_ASSERT(success, "Could not initialize GLFW!");
 			glfwSetErrorCallback(GLFWErrorsCallback);
 		}
 
 		{
 			SRS_PROFILE_SCOPE("glfwCreateWindow");
+		#if defined(SRS_DEBUG)
+			if (Renderer::GetAPI() == RendererAPI::API::OpenGL)
+				glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE);
+		#endif
 			m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 			++s_GLFWWindowCount;
 		}
@@ -91,19 +94,19 @@ namespace Sirius {
 				{
 				case GLFW_PRESS:
 				{
-					KeyPressedEvent event(key, 0);
+					KeyPressedEvent event(static_cast<KeyCode>(key), 0);
 					data.EventCallback(event);
 					break;
 				}
 				case GLFW_RELEASE:
 				{
-					KeyReleasedEvent event(key);
+					KeyReleasedEvent event(static_cast<KeyCode>(key));
 					data.EventCallback(event);
 					break;
 				}
 				case GLFW_REPEAT:
 				{
-					KeyPressedEvent event(key, 1);
+					KeyPressedEvent event(static_cast<KeyCode>(key), 1);
 					data.EventCallback(event);
 					break;
 				}
@@ -114,7 +117,7 @@ namespace Sirius {
 			{
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
-				KeyTypedEvent event(keycode);
+				KeyTypedEvent event(static_cast<KeyCode>(keycode));
 				data.EventCallback(event);
 			});
 
@@ -126,13 +129,13 @@ namespace Sirius {
 				{
 				case GLFW_PRESS:
 				{
-					MouseButtonPressedEvent event(button);
+					MouseButtonPressedEvent event(static_cast<MouseCode>(button));
 					data.EventCallback(event);
 					break;
 				}
 				case GLFW_RELEASE:
 				{
-					MouseButtonReleasedEvent event(button);
+					MouseButtonReleasedEvent event(static_cast<MouseCode>(button));
 					data.EventCallback(event);
 					break;
 				}
