@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Sirius/Core/Core.h"
+#include "Sirius/Core/Base.h"
 #include "Sirius/Core/KeyCodes.h"
 #include "Sirius/Core/MouseCodes.h"
 

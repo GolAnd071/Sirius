@@ -44,12 +44,22 @@
 #endif // End of platform detection
 
 #ifdef SRS_DEBUG
+	#if defined(SRS_PLATFORM_WINDOWS)
+		#define SRS_DEBUGBREAK() __debugbreak()
+	#elif defined(SRS_PLATFORM_LINUX)
+		#include <signal.h>
+		#define SRS_DEBUGBREAK() raise(SIGTRAP)
+	#else
+		#error "Platform doesn't support debugbreak yet!"
+	#endif
 	#define SRS_ENABLE_ASSERTS
+#else
+	#define SRS_DEBUGBREAK()
 #endif
 
 #ifdef SRS_ENABLE_ASSERTS
-	#define SRS_ASSERT(x, ...) { if(!(x)) { SRS_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
-	#define SRS_CORE_ASSERT(x, ...) { if(!(x)) { SRS_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define SRS_ASSERT(x, ...) { if(!(x)) { SRS_ERROR("Assertion Failed: {0}", __VA_ARGS__); SRS_DEBUGBREAK(); } }
+	#define SRS_CORE_ASSERT(x, ...) { if(!(x)) { SRS_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); SRS_DEBUGBREAK(); } }
 #else
 	#define SRS_ASSERT(x, ...)
 	#define SRS_CORE_ASSERT(x, ...)

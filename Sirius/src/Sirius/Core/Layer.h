@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Sirius/Core/Core.h"
+#include "Sirius/Core/Base.h"
 #include "Sirius/Core/Timestep.h"
 #include "Sirius/Events/Event.h"
 

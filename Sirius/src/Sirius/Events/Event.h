@@ -1,7 +1,7 @@
 #pragma once
 #include "srspch.h"
 
-#include "Sirius/Core/Core.h"
+#include "Sirius/Core/Base.h"
 
 namespace Sirius {
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Sirius/Core/Core.h"
+#include "Sirius/Core/Base.h"
 
 #ifdef SRS_PLATFORM_WINDOWS
 

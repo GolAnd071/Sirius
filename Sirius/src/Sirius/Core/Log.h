@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Sirius/Core/Core.h"
+#include "Sirius/Core/Base.h"
 
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>

@@ -2,7 +2,7 @@
 
 // For use by Sirius applications
 
-#include "Sirius/Core/Core.h"
+#include "Sirius/Core/Base.h"
 
 #include "Sirius/Core/Application.h"
 #include "Sirius/Core/Layer.h"
