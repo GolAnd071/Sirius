@@ -20,7 +20,6 @@ private:
 	// Temp
 	Sirius::Ref<Sirius::VertexArray> m_SquareVA;
 	Sirius::Ref<Sirius::Shader> m_FlatColorShader;
-	Sirius::Ref<Sirius::Framebuffer> m_Framebuffer;
 
 	Sirius::Ref<Sirius::Texture2D> m_CheckerboardTexture;
 	

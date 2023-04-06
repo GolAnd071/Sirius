@@ -1,6 +1,6 @@
 workspace "Sirius"
 	architecture "x86_64"
-	startproject "Sandbox"
+	startproject "Sirius-Editor"
 
 	configurations
 	{
@@ -28,7 +28,6 @@ group "Dependencies"
 	include "Sirius/vendor/GLFW"
 	include "Sirius/vendor/Glad"
 	include "Sirius/vendor/imgui"
-
 group ""
 
 project "Sirius"
@@ -110,6 +109,53 @@ project "Sandbox"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/${prj.name}")
+
+	files
+	{
+		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.cpp"
+	}
+
+	includedirs
+	{
+		"Sirius/vendor/spdlog/include",
+		"Sirius/src",
+		"Sirius/vendor",
+		"%{IncludeDir.glm}"
+	}
+
+	links
+	{
+		"Sirius"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+
+	filter "configurations:Debug"
+		defines "SRS_DEBUG"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		defines "SRS_RELEASE"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		defines "SRS_DIST"
+		runtime "Release"
+		optimize "on"
+
+project "Sirius-Editor"
+	location "Sirius-Editor"
+	kind "ConsoleApp"
+	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{

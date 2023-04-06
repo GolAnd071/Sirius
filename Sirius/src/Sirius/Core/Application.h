@@ -18,7 +18,7 @@ namespace Sirius {
 	class Application
 	{
 	public:
-		Application();
+		Application(const std::string& name = "Sirius App");
 		virtual ~Application();
 
 		void OnEvent(Event& e);
