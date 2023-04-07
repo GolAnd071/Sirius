@@ -17,6 +17,11 @@
 
 #include "Sirius/ImGui/ImGuiLayer.h"
 
+#include "Sirius/Scene/Scene.h"
+#include "Sirius/Scene/Entity.h"
+#include "Sirius/Scene/ScriptableEntity.h"
+#include "Sirius/Scene/Components.h"
+
 // ---Renderer------------------------
 #include "Sirius/Renderer/Renderer.h"
 #include "Sirius/Renderer/Renderer2D.h"
@@ -25,7 +30,7 @@
 #include "Sirius/Renderer/Buffer.h"
 #include "Sirius/Renderer/Shader.h"
 #include "Sirius/Renderer/Framebuffer.h"
-#include "Sirius/Renderer/Texture.h"
+#include "Sirius/Renderer/Texture.h"	
 #include "Sirius/Renderer/VertexArray.h"
 
 #include "Sirius/Renderer/OrthographicCamera.h"

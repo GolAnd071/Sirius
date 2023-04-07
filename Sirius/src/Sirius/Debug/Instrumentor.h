@@ -6,6 +6,10 @@
 #include <iomanip>
 #include <string>
 #include <thread>
+#include <mutex>
+#include <sstream>
+
+#include "Sirius/Core/Log.h"
 
 namespace Sirius {
 
@@ -27,15 +31,9 @@ namespace Sirius {
 
 	class Instrumentor
 	{
-	private:
-		std::mutex m_Mutex;
-		InstrumentationSession* m_CurrentSession;
-		std::ofstream m_OutputStream;
 	public:
-		Instrumentor()
-			: m_CurrentSession(nullptr)
-		{
-		}
+		Instrumentor(const Instrumentor&) = delete;
+		Instrumentor(Instrumentor&&) = delete;
 
 		void BeginSession(const std::string& name, const std::string& filepath = "results.json")
 		{
@@ -102,8 +100,16 @@ namespace Sirius {
 			static Instrumentor instance;
 			return instance;
 		}
-
 	private:
+		Instrumentor()
+			: m_CurrentSession(nullptr)
+		{
+		}
+
+		~Instrumentor()
+		{
+			EndSession();
+		}
 
 		void WriteHeader()
 		{
@@ -129,6 +135,10 @@ namespace Sirius {
 				m_CurrentSession = nullptr;
 			}
 		}
+	private:
+		std::mutex m_Mutex;
+		InstrumentationSession* m_CurrentSession;
+		std::ofstream m_OutputStream;
 
 	};
 
@@ -219,8 +229,10 @@ namespace Sirius {
 
 	#define SRS_PROFILE_BEGIN_SESSION(name, filepath) ::Sirius::Instrumentor::Get().BeginSession(name, filepath)
 	#define SRS_PROFILE_END_SESSION() ::Sirius::Instrumentor::Get().EndSession()
-	#define SRS_PROFILE_SCOPE(name) constexpr auto fixedName = ::Sirius::InstrumentorUtils::CleanupOutputString(name, "__cdecl ");\
-									::Sirius::InstrumentationTimer timer##__LINE__(fixedName.Data);
+	#define HZ_PROFILE_SCOPE_LINE2(name, line) constexpr auto fixedName##line = ::Sirius::InstrumentorUtils::CleanupOutputString(name, "__cdecl ");\
+											   ::Sirius::InstrumentationTimer timer##line(fixedName##line.Data)
+	#define HZ_PROFILE_SCOPE_LINE(name, line) HZ_PROFILE_SCOPE_LINE2(name, line)
+	#define HZ_PROFILE_SCOPE(name) HZ_PROFILE_SCOPE_LINE(name, __LINE__)
 	#define SRS_PROFILE_FUNCTION() SRS_PROFILE_SCOPE(SRS_FUNC_SIG)
 #else
 	#define SRS_PROFILE_BEGIN_SESSION(name, filepath)

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "srspch.h"
+#include <sstream>
 
 #include "Sirius/Core/Base.h"
 #include "Sirius/Events/Event.h"
