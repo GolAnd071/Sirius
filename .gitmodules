@@ -14,3 +14,6 @@
 	path = Sirius/vendor/glm
 	url = ../../g-truc/glm.git
 	branch = master
+[submodule "Sirius/vendor/yaml-cpp"]
+	path = Sirius/vendor/yaml-cpp
+	url = https://github.com/GolAnd071/yaml-cpp

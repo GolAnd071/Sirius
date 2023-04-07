@@ -35,7 +35,8 @@ project "Sirius"
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
+		"%{IncludeDir.yaml_cpp}"
 	}
 
 	links
@@ -43,6 +44,7 @@ project "Sirius"
 		"GLFW",
 		"Glad",
 		"ImGui",
+		"yaml-cpp",
 		"opengl32.lib"
 	}
 
@@ -51,6 +53,7 @@ project "Sirius"
 
 		defines
 		{
+			"YAML_CPP_STATIC_DEFINE"
 		}
 
 	filter "configurations:Debug"
