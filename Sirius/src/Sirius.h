@@ -7,6 +7,7 @@
 #include "Sirius/Core/Application.h"
 #include "Sirius/Core/Layer.h"
 #include "Sirius/Core/Log.h"
+#include "Sirius/Core/Assert.h"
 
 #include "Sirius/Core/Timestep.h"
 

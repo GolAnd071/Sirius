@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Sirius/Core/Base.h"
-#include "Sirius/Core/Log.h"
 #include "Sirius/Scene/Scene.h"
 #include "Sirius/Scene/Entity.h"
 

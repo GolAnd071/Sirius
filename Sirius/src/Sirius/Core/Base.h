@@ -18,14 +18,8 @@
 	#define SRS_DEBUGBREAK()
 #endif
 
-// TODO: Make this macro able to take in no arguments except condition
-#ifdef SRS_ENABLE_ASSERTS
-	#define SRS_ASSERT(x, ...) { if(!(x)) { SRS_ERROR("Assertion Failed: {0}", __VA_ARGS__); SRS_DEBUGBREAK(); } }
-	#define SRS_CORE_ASSERT(x, ...) { if(!(x)) { SRS_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); SRS_DEBUGBREAK(); } }
-#else
-	#define SRS_ASSERT(x, ...)
-	#define SRS_CORE_ASSERT(x, ...)
-#endif
+#define SRS_EXPAND_MACRO(x) x
+#define SRS_STRINGIFY_MACRO(x) #x
 
 #define BIT(x) (1 << x)
 
@@ -50,3 +44,6 @@ namespace Sirius {
 	}
 
 }
+
+#include "Sirius/Core/Log.h"
+#include "Sirius/Core/Assert.h"

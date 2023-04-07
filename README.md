@@ -1,4 +1,4 @@
-# Sirius
+# Sirius [![License](https://img.shields.io/github/license/GolAnd071/Sirius.svg)](https://github.com/GolAnd071/Sirius/blob/master/LICENSE)
 
 ![Sirius](/Resources/Branding/Sirius_Logo_Text_Light_Square.png?raw=true "Sirius")
 
@@ -7,11 +7,9 @@ Sirius is primarily an early-stage interactive application and rendering engine 
 ## Getting Started
 Visual Studio 2022 is recommended, Sirius is officially untested on other development environments whilst we focus on a Windows build.
 
-You can clone the repository to a local destination using git:
+Start by cloning the repository with `git clone --recursive https://github.com/GolAnd071/Sirius`.
 
-`git clone --recursive https://github.com/GolAnd071/Sirius`
-
-Make sure that you do a `--recursive` clone to fetch all of the submodules!
+If the repository was cloned non-recursively previously, use `git submodule update --init` to clone the necessary submodules.
 
 ### Main features to come:
 - Fast 2D rendering (UI, particles, sprites, etc.)
