@@ -17,3 +17,6 @@
 [submodule "Sirius/vendor/yaml-cpp"]
 	path = Sirius/vendor/yaml-cpp
 	url = https://github.com/GolAnd071/yaml-cpp
+[submodule "Sirius/vendor/ImGuizmo"]
+	path = Sirius/vendor/ImGuizmo
+	url = https://github.com/GolAnd071/ImGuizmo

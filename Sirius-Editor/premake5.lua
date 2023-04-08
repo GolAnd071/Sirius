@@ -19,7 +19,8 @@ project "Sirius-Editor"
 		"%{wks.location}/Sirius/src",
 		"%{wks.location}/Sirius/vendor",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
+		"%{IncludeDir.ImGuizmo}"
 	}
 
 	links
