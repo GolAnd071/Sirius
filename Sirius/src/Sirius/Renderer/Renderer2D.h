@@ -5,6 +5,7 @@
 #include "Sirius/Renderer/Texture.h"
 
 #include "Sirius/Renderer/Camera.h"
+#include "Sirius/Renderer/EditorCamera.h"
 
 namespace Sirius {
 
@@ -15,6 +16,7 @@ namespace Sirius {
 		static void Shutdown();
 
 		static void BeginScene(const Camera& camera, const glm::mat4& transform);
+		static void BeginScene(const EditorCamera& camera);
 		static void BeginScene(const OrthographicCamera& camera); // TODO: remove
 		static void EndScene();
 		static void Flush();

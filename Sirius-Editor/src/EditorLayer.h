@@ -3,6 +3,8 @@
 #include "Sirius.h"
 #include "Panels/SceneHierarchyPanel.h"
 
+#include "Sirius/Renderer/EditorCamera.h"
+
 namespace Sirius {
 
 	class EditorLayer : public Layer
@@ -37,6 +39,8 @@ namespace Sirius {
 		Entity m_SecondCamera;
 
 		bool m_PrimaryCamera = true;
+
+		EditorCamera m_EditorCamera;
 
 		Ref<Texture2D> m_CheckerboardTexture;
 
