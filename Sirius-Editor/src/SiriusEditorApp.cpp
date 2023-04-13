@@ -8,8 +8,8 @@ namespace Sirius {
 	class SiriusEditor : public Application
 	{
 	public:
-		SiriusEditor()
-			: Application("Sirius Editor")
+		SiriusEditor(ApplicationCommandLineArgs args)
+			: Application("Sirius Editor", args)
 		{
 			PushLayer(new EditorLayer());
 		}
@@ -20,9 +20,9 @@ namespace Sirius {
 
 	};
 
-	Application* CreateApplication()
+	Application* CreateApplication(ApplicationCommandLineArgs args)
 	{
-		return new SiriusEditor();
+		return new SiriusEditor(args);
 	}
 
 }
