@@ -2,6 +2,8 @@
 
 #include <filesystem>
 
+#include "Sirius/Renderer/Texture.h"
+
 namespace Sirius {
 
 	class ContentBrowserPanel
@@ -12,6 +14,9 @@ namespace Sirius {
 		void OnImGuiRender();
 	private:
 		std::filesystem::path m_CurrentDirectory;
+
+		Ref<Texture2D> m_DirectoryIcon;
+		Ref<Texture2D> m_FileIcon;
 	};
 
 }

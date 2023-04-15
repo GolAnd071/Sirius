@@ -8,7 +8,7 @@
 class Sandbox : public Sirius::Application
 {
 public:
-	Sandbox()
+	Sandbox(Sirius::ApplicationCommandLineArgs args)
 	{
 		// PushLayer(new ExampleLayer());
 		PushLayer(new Sandbox2D());
@@ -20,7 +20,7 @@ public:
 
 };
 
-Sirius::Application* Sirius::CreateApplication()
+Sirius::Application* Sirius::CreateApplication(Sirius::ApplicationCommandLineArgs args)
 {
-	return new Sandbox();
+	return new Sandbox(args);
 }
