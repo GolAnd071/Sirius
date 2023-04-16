@@ -33,6 +33,14 @@ group "Dependencies"
 	include "Sirius/vendor/yaml-cpp"
 group ""
 
-include "Sirius"
-include "Sandbox"
-include "Sirius-Editor"
+group "Core"
+	include "Sirius"
+group ""
+
+group "Tools"
+	include "Sirius-Editor"
+group ""
+
+group "Misc"
+	include "Sandbox"
+group ""
