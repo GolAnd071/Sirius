@@ -20,3 +20,6 @@
 [submodule "Sirius/vendor/ImGuizmo"]
 	path = Sirius/vendor/ImGuizmo
 	url = https://github.com/GolAnd071/ImGuizmo
+[submodule "Sirius/vendor/Box2D"]
+	path = Sirius/vendor/Box2D
+	url = https://github.com/GolAnd071/box2d
