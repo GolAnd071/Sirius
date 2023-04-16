@@ -35,6 +35,7 @@ group ""
 
 group "Core"
 	include "Sirius"
+	include "Sirius-ScriptCore"
 group ""
 
 group "Tools"

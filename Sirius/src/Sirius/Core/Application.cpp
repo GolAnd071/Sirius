@@ -4,6 +4,7 @@
 #include "Sirius/Core/Log.h"
 
 #include "Sirius/Renderer/Renderer.h"
+#include "Sirius/Scripting/ScriptEngine.h"
 
 #include "Sirius/Core/Input.h"
 #include "Sirius/Utils/PlatformUtils.h"
@@ -28,6 +29,7 @@ namespace Sirius {
 		m_Window->SetEventCallback(SRS_BIND_EVENT_FN(Application::OnEvent));
 
 		Renderer::Init();
+		ScriptEngine::Init();
 
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
@@ -37,6 +39,7 @@ namespace Sirius {
 	{
 		SRS_PROFILE_FUNCTION();
 
+		ScriptEngine::Shutdown();
 		Renderer::Shutdown();
 	}
 

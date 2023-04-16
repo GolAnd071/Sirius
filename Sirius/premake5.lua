@@ -40,6 +40,7 @@ project "Sirius"
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
 		"%{IncludeDir.entt}",
+		"%{IncludeDir.mono}",
 		"%{IncludeDir.yaml_cpp}",
 		"%{IncludeDir.ImGuizmo}",
 		"%{IncludeDir.VulkanSDK}"
@@ -52,7 +53,9 @@ project "Sirius"
 		"Glad",
 		"ImGui",
 		"yaml-cpp",
-		"opengl32.lib"
+		"opengl32.lib",
+
+		"%{Library.mono}",
 	}
 
 	filter "files:vendor/ImGuizmo/**.cpp"
@@ -64,6 +67,14 @@ project "Sirius"
 		defines
 		{
 			"YAML_CPP_STATIC_DEFINE"
+		}
+
+		links
+		{
+			"%{Library.WinSock}",
+			"%{Library.WinMM}",
+			"%{Library.WinVersion}",
+			"%{Library.BCrypt}",
 		}
 
 	filter "configurations:Debug"
