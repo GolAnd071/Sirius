@@ -1,9 +1,9 @@
 #pragma once
 
-#include <sstream>
-
 #include "Sirius/Core/Base.h"
 #include "Sirius/Events/Event.h"
+
+#include <sstream>
 
 namespace Sirius {
 

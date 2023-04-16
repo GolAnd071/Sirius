@@ -8,21 +8,21 @@ namespace Sirius {
 	class SiriusEditor : public Application
 	{
 	public:
-		SiriusEditor(ApplicationCommandLineArgs args)
-			: Application("Sirius Editor", args)
+		SiriusEditor(const ApplicationSpecification& spec)
+			: Application(spec)
 		{
 			PushLayer(new EditorLayer());
-		}
-
-		~SiriusEditor()
-		{
 		}
 
 	};
 
 	Application* CreateApplication(ApplicationCommandLineArgs args)
 	{
-		return new SiriusEditor(args);
+		ApplicationSpecification spec;
+		spec.Name = "Sirius-Editor";
+		spec.CommandLineArgs = args;
+
+		return new SiriusEditor(spec);
 	}
 
 }

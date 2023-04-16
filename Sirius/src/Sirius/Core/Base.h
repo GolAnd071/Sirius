@@ -1,8 +1,8 @@
 #pragma once
 
-#include <memory>
-
 #include "Sirius/Core/PlatformDetection.h"
+
+#include <memory>
 
 #ifdef SRS_DEBUG
 	#if defined(SRS_PLATFORM_WINDOWS)

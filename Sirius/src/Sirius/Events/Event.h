@@ -1,8 +1,9 @@
 #pragma once
-#include <functional>
 
 #include "Sirius/Debug/Instrumentor.h"
 #include "Sirius/Core/Base.h"
+
+#include <functional>
 
 namespace Sirius {
 

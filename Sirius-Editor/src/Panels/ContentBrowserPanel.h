@@ -1,8 +1,8 @@
 #pragma once
 
-#include <filesystem>
-
 #include "Sirius/Renderer/Texture.h"
+
+#include <filesystem>
 
 namespace Sirius {
 

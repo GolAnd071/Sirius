@@ -1,7 +1,8 @@
 #pragma once
 
-#include <memory>
 #include "Sirius/Renderer/Buffer.h"
+
+#include <memory>
 
 namespace Sirius {
 

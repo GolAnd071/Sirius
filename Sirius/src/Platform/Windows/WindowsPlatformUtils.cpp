@@ -1,14 +1,18 @@
 #include "srspch.h"
 #include "Sirius/Utils/PlatformUtils.h"
+#include "Sirius/Core/Application.h"
 
 #include <commdlg.h>
 #include <GLFW/glfw3.h>
 #define GLFW_EXPOSE_NATIVE_WIN32
 #include <GLFW/glfw3native.h>
 
-#include "Sirius/Core/Application.h"
-
 namespace Sirius {
+
+	float Time::GetTime()
+	{
+		return glfwGetTime();
+	}
 
 	std::string FileDialogs::OpenFile(const char* filter)
 	{

@@ -1,9 +1,9 @@
 #pragma once
 
-#include <glm/glm.hpp>
-
 #include "Sirius/Core/KeyCodes.h"
 #include "Sirius/Core/MouseCodes.h"
+
+#include <glm/glm.hpp>
 
 namespace Sirius {
 

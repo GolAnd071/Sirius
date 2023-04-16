@@ -8,7 +8,8 @@
 class Sandbox : public Sirius::Application
 {
 public:
-	Sandbox(Sirius::ApplicationCommandLineArgs args)
+	Sandbox(const Sirius::ApplicationSpecification& specification)
+		: Sirius::Application(specification)
 	{
 		// PushLayer(new ExampleLayer());
 		PushLayer(new Sandbox2D());
@@ -22,5 +23,10 @@ public:
 
 Sirius::Application* Sirius::CreateApplication(Sirius::ApplicationCommandLineArgs args)
 {
-	return new Sandbox(args);
+	ApplicationSpecification spec;
+	spec.Name = "Sandbox";
+	spec.WorkingDirectory = "../Sirius-Editor";
+	spec.CommandLineArgs = args;
+
+	return new Sandbox(spec);
 }
