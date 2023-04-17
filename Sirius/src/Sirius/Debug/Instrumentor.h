@@ -229,10 +229,10 @@ namespace Sirius {
 
 	#define SRS_PROFILE_BEGIN_SESSION(name, filepath) ::Sirius::Instrumentor::Get().BeginSession(name, filepath)
 	#define SRS_PROFILE_END_SESSION() ::Sirius::Instrumentor::Get().EndSession()
-	#define HZ_PROFILE_SCOPE_LINE2(name, line) constexpr auto fixedName##line = ::Sirius::InstrumentorUtils::CleanupOutputString(name, "__cdecl ");\
+	#define SRS_PROFILE_SCOPE_LINE2(name, line) constexpr auto fixedName##line = ::Sirius::InstrumentorUtils::CleanupOutputString(name, "__cdecl ");\
 											   ::Sirius::InstrumentationTimer timer##line(fixedName##line.Data)
-	#define HZ_PROFILE_SCOPE_LINE(name, line) HZ_PROFILE_SCOPE_LINE2(name, line)
-	#define HZ_PROFILE_SCOPE(name) HZ_PROFILE_SCOPE_LINE(name, __LINE__)
+	#define SRS_PROFILE_SCOPE_LINE(name, line) SRS_PROFILE_SCOPE_LINE2(name, line)
+	#define SRS_PROFILE_SCOPE(name) SRS_PROFILE_SCOPE_LINE(name, __LINE__)
 	#define SRS_PROFILE_FUNCTION() SRS_PROFILE_SCOPE(SRS_FUNC_SIG)
 #else
 	#define SRS_PROFILE_BEGIN_SESSION(name, filepath)
