@@ -3,8 +3,8 @@ project "Sirius-ScriptCore"
 	language "C#"
 	dotnetframework "4.7.2"
 
-	targetdir ("%{wks.location}/Sirius-Editor/Resources/Scripts")
-	objdir ("%{wks.location}/Sirius-Editor/Resources/Scripts/Intermediates")
+	targetdir ("../Sirius-Editor/Resources/Scripts")
+	objdir ("../Sirius-Editor/Resources/Scripts/Intermediates")
 
 	files 
 	{
