@@ -18,8 +18,9 @@ project "Sirius-Editor"
 		"%{wks.location}/Sirius/vendor/spdlog/include",
 		"%{wks.location}/Sirius/src",
 		"%{wks.location}/Sirius/vendor",
-		"%{IncludeDir.glm}",
 		"%{IncludeDir.entt}",
+		"%{IncludeDir.filewatch}",
+		"%{IncludeDir.glm}",
 		"%{IncludeDir.ImGuizmo}"
 	}
 

@@ -7,6 +7,7 @@ IncludeDir = {}
 IncludeDir["stb_image"] = "%{wks.location}/Sirius/vendor/stb_image"
 IncludeDir["yaml_cpp"] = "%{wks.location}/Sirius/vendor/yaml-cpp/include"
 IncludeDir["Box2D"] = "%{wks.location}/Sirius/vendor/Box2D/include"
+IncludeDir["filewatch"] = "%{wks.location}/Sirius/vendor/filewatch"
 IncludeDir["GLFW"] = "%{wks.location}/Sirius/vendor/GLFW/include"
 IncludeDir["Glad"] = "%{wks.location}/Sirius/vendor/Glad/include"
 IncludeDir["ImGui"] = "%{wks.location}/Sirius/vendor/ImGui"

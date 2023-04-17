@@ -9,6 +9,4 @@ namespace Sirius {
 		static void RegisterFunctions();
 	};
 
-
-
 }

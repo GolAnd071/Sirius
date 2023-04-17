@@ -23,6 +23,8 @@
 #include "Sirius/Scene/ScriptableEntity.h"
 #include "Sirius/Scene/Components.h"
 
+#include "Sirius/Project/Project.h"
+
 // ---Renderer------------------------
 #include "Sirius/Renderer/Renderer.h"
 #include "Sirius/Renderer/Renderer2D.h"
